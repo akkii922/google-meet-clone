@@ -125,7 +125,7 @@ const CallPage = () => {
 
         peer.on("stream", (stream) => {
           // got remote video stream, now let's show it in a video tag
-          var video = document.querySelector("video");
+          let video = document.querySelector("video");
 
           if ("srcObject" in video) {
             video.srcObject = stream;
@@ -190,7 +190,9 @@ const CallPage = () => {
   };
 
   const disconnectCall = () => {
+    peer.destroy();
     history.push("/");
+    window.location.reload();
   };
 
   return (
