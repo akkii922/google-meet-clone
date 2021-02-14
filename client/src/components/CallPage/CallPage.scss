@@ -1,0 +1,9 @@
+.callpage-container {
+  .video-container {
+    height: 100vh;
+    width: 100%;
+    object-fit: cover; // use "cover" to avoid distortion
+    position: absolute;
+    z-index: -1;
+  }
+}

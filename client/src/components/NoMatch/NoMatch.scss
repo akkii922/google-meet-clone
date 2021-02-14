@@ -1,0 +1,23 @@
+.no-match {
+  .no-match__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+    h2 {
+      font-size: 38px;
+      font-weight: 300;
+    }
+    .btn {
+      cursor: pointer;
+      font-size: 16px;
+      padding: 15px;
+      border: none;
+      outline: none;
+      background: none;
+      border-radius: 5px;
+      text-decoration: none;
+    }
+  }
+}
