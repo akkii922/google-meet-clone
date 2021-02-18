@@ -40,6 +40,7 @@ const Messenger = ({ setIsMessenger, sendMsg, messageList }) => {
           }}
         />
       </div>
+
       <div className="messenger-header-tabs">
         <div className="tab">
           <FontAwesomeIcon className="icon" icon={faUserFriends} />
@@ -50,6 +51,7 @@ const Messenger = ({ setIsMessenger, sendMsg, messageList }) => {
           <p>Chat</p>
         </div>
       </div>
+
       <div className="chat-section">
         {messageList.map((item) => (
           <div key={item.time} className="chat-block">
@@ -60,6 +62,7 @@ const Messenger = ({ setIsMessenger, sendMsg, messageList }) => {
           </div>
         ))}
       </div>
+
       <div className="send-msg-section">
         <input
           placeholder="Send a message to everyone"

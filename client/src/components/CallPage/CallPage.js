@@ -135,6 +135,7 @@ const CallPage = () => {
 
           video.play();
         });
+        
       })
       .catch(() => {});
   };

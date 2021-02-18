@@ -13,7 +13,7 @@ const MeetingInfo = ({ setMeetInfoPopup, url }) => {
       <div className="meeting-header">
         <h3>Your meeting's ready</h3>
         <FontAwesomeIcon
-          className="icon red"
+          className="icon"
           icon={faTimes}
           onClick={() => {
             setMeetInfoPopup(false);
@@ -21,7 +21,7 @@ const MeetingInfo = ({ setMeetInfoPopup, url }) => {
         />
       </div>
       <button className="add-people-btn">
-        <FontAwesomeIcon className="icon red" icon={faUser} />
+        <FontAwesomeIcon className="icon" icon={faUser} />
         Add Others
       </button>
       <p className="info-text">
@@ -30,7 +30,7 @@ const MeetingInfo = ({ setMeetInfoPopup, url }) => {
       <div className="meet-link">
         <span>{url}</span>
         <FontAwesomeIcon
-          className="icon red"
+          className="icon"
           icon={faCopy}
           onClick={() => navigator.clipboard.writeText(url)}
         />
