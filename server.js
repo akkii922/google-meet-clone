@@ -15,7 +15,13 @@ app.use([
   Routes,
 ]);
 
-const io = (module.exports.io = require("socket.io")(server));
+// const io = (module.exports.io = require("socket.io")(server));
+// This is missing in the video.
+const io = (module.exports.io = require('socket.io')(server, {
+    cors: {
+        origin: '*',
+    }
+}));
 const socketManager = require("./app/socketManager");
 io.on("connection", socketManager);
 
