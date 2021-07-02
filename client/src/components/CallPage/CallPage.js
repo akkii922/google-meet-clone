@@ -46,7 +46,9 @@ const CallPage = () => {
     }
     initWebRTC();
     socket.on("code", (data) => {
-      peer.signal(data);
+      if (data.url === url) {
+        peer.signal(data.code);
+      }
     });
   }, []);
 
@@ -84,9 +86,10 @@ const CallPage = () => {
             };
             await postRequest(`${BASE_URL}${SAVE_CALL_ID}`, payload);
           } else {
-            socket.emit("code", data, (cbData) => {
+            socket.emit("code", { code: data, url }, (cbData) => {
               console.log("code sent");
             });
+
           }
         });
 
@@ -135,9 +138,9 @@ const CallPage = () => {
 
           video.play();
         });
-        
+
       })
-      .catch(() => {});
+      .catch(() => { });
   };
 
   const sendMsg = (msg) => {
