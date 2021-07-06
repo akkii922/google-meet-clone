@@ -17,7 +17,7 @@ import CallPageFooter from "../UI/CallPageFooter/CallPageFooter";
 import CallPageHeader from "../UI/CallPageHeader/CallPageHeader";
 
 let peer = null;
-const socket = io.connect("http://localhost:4000");
+const socket = io.connect(process.env.REACT_APP_BASE_URL);
 const initialState = [];
 
 const CallPage = () => {
